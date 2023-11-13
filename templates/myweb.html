@@ -1,54 +1,105 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<title>黃玟瑄個人網頁</title>
-	<style type="text/css">
-	 * { font-family:"標楷體"; margin-left:auto; margin-right:auto;}
-	 h1 {color:blue; font-size:60px;}
-	 h2 {color:#5577; font-size:40px;}
-	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黃玟瑄的個人網頁</title>
+    <style type="text/css">
+        body {
+            font-family: "標楷體", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
-	<script>
-	 function change1(){
-	 	document.getElementByld("pic").src="/static/selfie.jpg";;
-	 }
+        .container {
+            width: 70%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-	 function change2(){
-	 	document.getElementByld("h2text").innerText="Huang Wan Xuan";
-	 }
-	 </script>
+        h1 {
+            color: blue;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
 
+        h2 {
+            color: #5577;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0066cc;
+        }
+    </style>
+
+    <script>
+        function change1() {
+            document.getElementById("pic").src = "/static/selfie.jpg";
+        }
+
+        function change2() {
+            document.getElementById("h2text").innerText = "Huang Wan Xuan";
+        }
+    </script>
 </head>
-<body>
-	<table width="70%">
-	<tr>
-	    <td>	 	
-	  		<img src="/static/selfie.jpg"width="80%"id="pic"onmouseover="change1()"onmouseout="change2()"></img>
-	    </td>
-	 
-		<td> 
-	 	<h1>黃玟瑄</h1>
-     	<h2 id="h2text">Huang Wan Xuan</h2>
-    </td>
- </tr>	
-</table>
-<table width="70%" border="1">
-	<tr>
-		<td>
-			FB：<a href="https://www.facebook.com/profile.php?id=100006126548004" target="_blank">https://www.facebook.com/profile.php?id=100006126548004<a><br>
-			Tel: <a href="tel:0965418312">0965418312<a><br>
-			E-Mail:<a href="mailto:s1114670@pu.edu.tw">s1114670@pu.edu.tw<a><br>
-		</td>
-		<td>		
-			個人座右銘<a><br>
-			只要不斷嘗試 沒有不可能的事<a><br>	
-			
-		</td>
- </tr>		
-</table>
 
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td>
+                    <img src="/static/selfie.jpg" width="80%" id="pic" onmouseover="change1()" onmouseout="change2()" alt="個人照片"></img>
+                </td>
+                <td>
+                    <h1>黃玟瑄</h1>
+                    <h2 id="h2text">Huang Wan Xuan</h2>
+                </td>
+            </tr>
+        </table>
+        <table border="1">
+            <tr>
+                <td>
+                    FB：<a href="https://www.facebook.com/profile.php?id=100006126548004" target="_blank">https://www.facebook.com/profile.php?id=100006126548004</a><br>
+                    Tel: <a href="tel:0965418312">0965418312</a><br>
+                    E-Mail:<a href="mailto:s1114670@pu.edu.tw">s1114670@pu.edu.tw</a><br>
+                </td>
+                <td>
+                    <p>個人座右銘：</p>
+                    <p>只要不斷嘗試，沒有不可能的事。</p>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>
